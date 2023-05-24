@@ -31,7 +31,6 @@ describe("When a event card is created", () => {
       />
     );
     const titleElement = screen.getByText(/test event/);
-
     const monthElement = screen.getByText(testMonth); // changement de test
     const labelElement = screen.getByText(/test label/);
     expect(titleElement).toBeInTheDocument();

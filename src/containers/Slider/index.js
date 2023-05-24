@@ -34,7 +34,7 @@ const Slider = () => {
     <div className="SlideCardList">
       {sortedEvents.map((event, idx) => (
         <div
-          key={event.title} // clé unique pcq chaque image a qu'un seul titre
+          key={event.title} // clé unique puisque chaque image n'a qu'un seul titre
           className={`SlideCard SlideCard--${
             index === idx ? "display" : "hide"
           }`}
@@ -53,7 +53,7 @@ const Slider = () => {
         <div className="SlideCard__pagination">
           {sortedEvents.map((event, idx) => (
             <input
-              key={event.title} // clé unique pcq chaque image a qu'un seul titre
+              key={event.title} // clé unique puisque chaque image n'a qu'un seul titre
               type="radio"
               name="radio-button"
               checked={index === idx}
@@ -68,10 +68,10 @@ const Slider = () => {
 
 export default Slider;
 
-/* ok donc là, le slider défilait de manière aléatoire et un des slide n'affichait pas la date,
+/* Le slider défilait de manière aléatoire et une des slide n'affichait pas la date,
 donc pour mieux comprendre j'ai réecris un peu, dabord useState de sortedEvent 
 puis dans le useEffect correction de la logique de tri dans la const byDataDesc, 
 ajout de sortedEvent.length dans la const timer.
-mis à jour des key, avec .title pcq y'a qu'un titre par event.
-concernant l'affichage de la date de chaque event, il fallait faire appel à la fonction getMonth 
-avec (newdate(event.date)) en argument et tadaa.   */
+mis à jour des key, avec .title puisqu'il n'y a qu'un titre par event.
+Concernant l'affichage de la date de chaque event, il fallait faire appel à la fonction getMonth 
+avec (newdate(event.date)) en argument.   */

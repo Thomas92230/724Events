@@ -70,6 +70,6 @@ Form.defaultProps = {
 
 export default Form;
 
-/* Bon ici le message d'envoi ne s'affichait apres click sur le bouton, 
-normal Onsucess n'était jamais appellée, constat fait après avoir fait un tour dans Home
+/* Le message d'envoi ne s'affichait pas apres le click sur le bouton, 
+Onsucess n'était jamais appellée, constat fait après avoir fait un tour dans Home
 et donc je l'ai ajoutée à setContact */
